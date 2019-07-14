@@ -1,0 +1,74 @@
+﻿@page
+@model Philson.Pages.ReceivedInterloans.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ReceivedInterloan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.BookTitle" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.BookTitle" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.BookTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.ReceivedDate" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.ReceivedDate" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.ReceivedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.ILLNo" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.ILLNo" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.ILLNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.PatronName" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.PatronName" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.PatronName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.Barcode" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.Barcode" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.Barcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.OriginalDueDate" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.OriginalDueDate" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.OriginalDueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.ReceivedBy" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.ReceivedBy" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.ReceivedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.DateOfReturn" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.DateOfReturn" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.DateOfReturn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInterloan.Notes" class="control-label"></label>
+                <input asp-for="ReceivedInterloan.Notes" class="form-control" />
+                <span asp-validation-for="ReceivedInterloan.Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,73 @@
+﻿@page
+@model Philson.Pages.ReceivedInterloans.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ReceivedInterloan</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.BookTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.BookTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.ReceivedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.ReceivedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.ILLNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.ILLNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.PatronName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.PatronName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.Barcode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.Barcode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.OriginalDueDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.OriginalDueDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.ReceivedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.ReceivedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.DateOfReturn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.DateOfReturn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReceivedInterloan.Notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReceivedInterloan.Notes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ReceivedInterloan.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

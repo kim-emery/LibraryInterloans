@@ -1,0 +1,79 @@
+﻿@page
+@model Philson.Pages.SuppliedInterloans.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SuppliedInterloan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.Title" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.Title" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.RequestDate" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.RequestDate" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.RequestDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.StaffRequesting" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.StaffRequesting" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.StaffRequesting" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.ILLRequestNo" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.ILLRequestNo" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.ILLRequestNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.CallNo" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.CallNo" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.CallNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.Barcode" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.Barcode" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.Barcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.ItemType" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.ItemType" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.ItemType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.Handler" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.Handler" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.Handler" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.ReturnDate" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.ReturnDate" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.ReturnDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuppliedInterloan.FurtherDetails" class="control-label"></label>
+                <input asp-for="SuppliedInterloan.FurtherDetails" class="form-control" />
+                <span asp-validation-for="SuppliedInterloan.FurtherDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
